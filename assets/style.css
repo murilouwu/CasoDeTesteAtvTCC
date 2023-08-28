@@ -4,6 +4,7 @@
 	--corC: #EAF205; 
 	--corD: #D9CB04; 
 	--corE: #BF6F6F;
+	--line-color: var(--corE);
 }
 *{
 	margin: 0px;
@@ -37,15 +38,73 @@ body{
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
-	background-size: var(--s) var(--s); 
+	background-image:
+	  linear-gradient(
+		  25deg,
+		  transparent 65%,
+		  var(--line-color),
+		  transparent 70%
+		  ),
+	  linear-gradient(
+		  -25deg,
+		  transparent 65%,
+		  var(--line-color),
+		  transparent 70%
+		  ),
+	  linear-gradient(
+		  -25deg,
+		  transparent 30%,
+		  var(--line-color),
+		  transparent 35%
+		  ),
+	  linear-gradient(
+		  25deg,
+		  transparent 30%,
+		  var(--line-color),
+		  transparent 35%
+		  ),
+	  linear-gradient(
+		  65deg,
+		  transparent 65%,
+		  var(--line-color),
+		  transparent 70%
+		  ),
+	  linear-gradient(
+		  -65deg,
+		  transparent 65%,
+		  var(--line-color),
+		  transparent 70%
+		  ),
+	  linear-gradient(
+		  -65deg,
+		  transparent 30%,
+		  var(--line-color),
+		  transparent 35%
+		  ),
+	  linear-gradient(
+		  65deg,
+		  transparent 30%,
+		  var(--line-color),
+		  transparent 35%
+		  );
+	background-size: 
+	  5em 2em,
+	  5em 2em,
+	  5em 2em,
+	  5em 2em,
+	  
+	  2em 5em,
+	  2em 5em,
+	  2em 5em,
+	  2em 5em;
 }
 	.Title{
 		color: var(--corA);
-		font-size: 8vh;
+		font-size: 5vh;
 		font-family: sans-serif;
 		font-weight: bold;
 		font-style: italic;
-		margin-top: 15vh;
+		margin-top: 5vh;
 		text-align: center;
 	}
     .operetion{
@@ -58,17 +117,17 @@ body{
         margin-top: 2vh;
     }
         .btn{
-            text-decoration: none;
-            background-color: var(--corB);
+            border: none;
+            background-color: var(--corC);
             padding: 2vh;
             width: 30%;
             text-align: center;
             font-size: 2vh;
             font-family: monospace;
             font-weight: bold;
-            color: var(--corA);
+            color: var(--corE);
             border-radius: 0.5vw;
-            box-shadow: 5px 5px var(--corC);
+            box-shadow: 5px 5px var(--corE);
             margin-top: 4vh;
         }
             .btn:hover{
@@ -77,5 +136,5 @@ body{
             }
 			.btn:active{
 				cursor: grabbing;
-				box-shadow: 0px 0px var(--corA);
+				box-shadow: 0px 0px var(--corE);
 			}

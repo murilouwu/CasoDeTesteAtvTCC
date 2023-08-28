@@ -7,15 +7,11 @@ function ocultar(obj, es){
     };
 };
 
-function tableOpen(Case, ids){
-
-}
-
 const CaseItem = [];
 //0-Name, 1-Pré-Condições, 2-Pós-Condições, 3-Detalhamento, 4-Massa de entrada e saída,
 //5-Critérios Especiais, 6-Ambiente, 7-Implementação, 8-Iteração
 CaseItem[0] = [
-    `Caso de Teste - 001 Cadastro de Usuários com CPF inválido`,
+    `Cadastro de Usuários com CPF inválido`,
     `
     <ul>
         <li>O sistema de cadastro de usuários está em um estado inicial e disponível para testes.</li>
@@ -86,7 +82,7 @@ CaseItem[0] = [
 ];
 
 CaseItem[1] = [
-    `Caso de Teste - 002 Alteração dos dados cadastrais de um funcionário sem permissão`,
+    `Alteração dos dados cadastrais de um funcionário sem permissão`,
     `
     <ul>
         <li>O sistema de gestão de RH está em um estado inicial e disponível para testes.</li>
@@ -155,7 +151,7 @@ CaseItem[1] = [
 ];
 
 CaseItem[2] = [
-    `Caso de Teste - 003 Rastreamento de Onibus`,
+    `Rastreamento de Onibus`,
     `
     <ul>
         <li>O sistema de rastreamento esta disponível para testes.</li>
@@ -220,7 +216,7 @@ CaseItem[2] = [
 ];
 
 CaseItem[3] = [
-    `Caso de Teste - 004 Validação dos dados por base do cartão do SUS`,
+    `Validação dos dados por base do cartão do SUS`,
     `
     <ul>
         <li>O sistema de autenticação está em um estado inicial e disponível para testes.</li>
@@ -289,7 +285,7 @@ CaseItem[3] = [
 ];
 
 CaseItem[4] = [
-    `Caso de Teste - 005 Verificar os pontos de embarque desembarque dos automóveis`,
+    `Verificar os pontos de embarque desembarque dos automóveis`,
     `
     <ul>
         <li>O sistema de gestão de ponto está em um estado inicial e disponível para testes.</li>
@@ -349,3 +345,14 @@ CaseItem[4] = [
     `Manual`,
     `1 Iteração`
 ];
+
+function tableOpen(Case, ids){
+    ocultar(ids[0], 0);
+    ocultar(ids[1], 0);
+
+    let Title = document.querySelector(ids[2]); //title
+    Title.innerHTML = `Caso de Teste - ${(Case+1)}`;
+
+    let Table = document.querySelector(ids[0]);
+    
+}

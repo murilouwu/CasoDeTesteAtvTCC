@@ -14,14 +14,16 @@
     <h1 class="Title">Casos de Testes</h1>
     <div class="operetion" id="Btns">
     </div>
+    <div class="tableMain" id="Table">
 
+    </div>
     <script>
         window.onload = ()=>{
             let div = document.querySelector('#Btns');
             let QtCase = 5;
             for (var i = 0; i<QtCase; i++){
                 div.innerHTML += `
-                    <button onclick="tableOpen(${i}, ['#', '#Btns', '.Title'])" class="btn">Case ${(i+1)}</a>
+                    <button onclick="tableOpen(${i}, ['#Table', '#Btns', '.Title'])" class="btn">Case ${(i+1)}</a>
                 `;
             }
         };
@@ -30,8 +32,8 @@
             var KeyCode = event.keyCode || event.which;
             if (KeyCode >= 49 && KeyCode <= 53) {
                 var pageNumber = KeyCode - 49;
-                var Case = pageNumber - 1;
-                tableOpen(Case, ['#', '#Btns', '.Title']);
+                var Case = pageNumber;
+                tableOpen(Case, ['#Table', '#Btns', '.Title']);
             }
         });
     </script>
