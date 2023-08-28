@@ -1,0 +1,81 @@
+:root{
+	--corA: #2A0940; 
+	--corB: #330C59; 
+	--corC: #EAF205; 
+	--corD: #D9CB04; 
+	--corE: #BF6F6F;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	transition: 0.3s;
+  }
+  /*web-kit*/
+	input[type=file]{
+	  display: none;
+	}
+	::-webkit-scrollbar{
+		width: 0vw;
+	}
+
+	::-webkit-inner-spin-button{
+		-webkit-appearance: none;
+	}
+
+	.ocultar{
+	  display: none;
+	}
+
+	button:focus, button:focus-visible, input:focus-visible, input:focus, select:focus-visible, select:focus, textarea:focus-visible, textarea:focus{
+	  outline: none;
+	}
+	input[type=checkbox]{
+		display: none;
+	}
+body{
+	background-color: var(--corD);
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	background-size: var(--s) var(--s); 
+}
+	.Title{
+		color: var(--corA);
+		font-size: 8vh;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-style: italic;
+		margin-top: 15vh;
+		text-align: center;
+	}
+    .operetion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+        height: auto;
+        margin-top: 2vh;
+    }
+        .btn{
+            text-decoration: none;
+            background-color: var(--corB);
+            padding: 2vh;
+            width: 30%;
+            text-align: center;
+            font-size: 2vh;
+            font-family: monospace;
+            font-weight: bold;
+            color: var(--corA);
+            border-radius: 0.5vw;
+            box-shadow: 5px 5px var(--corC);
+            margin-top: 4vh;
+        }
+            .btn:hover{
+                cursor: pointer;
+				box-shadow: 7px 7px var(--corA);
+            }
+			.btn:active{
+				cursor: grabbing;
+				box-shadow: 0px 0px var(--corA);
+			}
