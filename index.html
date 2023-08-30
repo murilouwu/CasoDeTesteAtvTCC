@@ -18,22 +18,24 @@
 
     </div>
     <script>
+        let infos = [
+            5, //numero de casos 0
+            '#Btns', //espaço para os btns 1
+            '#Table', //tabela 2
+            '#Title' //titulo 3
+        ];
         window.onload = ()=>{
-            let div = document.querySelector('#Btns');
-            let QtCase = 5;
-            for (var i = 0; i<QtCase; i++){
-                div.innerHTML += `
-                    <button onclick="tableOpen(${i}, ['#Table', '#Btns', '.Title'])" class="btn">Case ${(i+1)}</a>
-                `;
-            }
+            tableClose(infos[0], infos[1]);
         };
         
         document.querySelector('body').addEventListener('keydown', (event)=>{
             var KeyCode = event.keyCode || event.which;
-            if (KeyCode >= 49 && KeyCode <= 53) {
+            if(KeyCode==37){
+                tableClose(infos[0], infos[1]);
+            }else if (KeyCode >= 49 && KeyCode <= 53) {
                 var pageNumber = KeyCode - 49;
                 var Case = pageNumber;
-                tableOpen(Case, ['#Table', '#Btns', '.Title']);
+                tableOpen(Case, [infos[2], infos[1], infos[3]]);
             }
         });
     </script>

@@ -356,3 +356,13 @@ function tableOpen(Case, ids){
     let Table = document.querySelector(ids[0]);
     
 }
+
+function tableClose(QtCase, BtnSpace){
+    ocultar(BtnSpace, 1);
+    let div = document.querySelector(BtnSpace);
+    for (var i = 0; i<QtCase; i++){
+        div.innerHTML += `
+            <button onclick="tableOpen(${i}, ['#Table', '#Btns', '.Title'])" class="btn">Case ${(i+1)}</a>
+        `;
+    }
+}
