@@ -351,15 +351,18 @@ function tableOpen(Case, ids){
     ocultar(ids[1], 0);
 
     let Title = document.querySelector(ids[2]); //title
-    Title.innerHTML = `Caso de Teste - ${(Case+1)}`;
+    Title.innerHTML = 'Caso de Teste - '+(Case+1);
 
-    let Table = document.querySelector(ids[0]);
-    
+    //let Table = document.querySelector(ids[0]);   
 }
 
-function tableClose(QtCase, BtnSpace){
-    ocultar(BtnSpace, 1);
-    let div = document.querySelector(BtnSpace);
+function tableClose(QtCase, ids){
+    ocultar(ids[0], 1);
+    let Title = document.querySelector(ids[2]);
+    Title.innerHTML = 'Caso de Testes';
+
+    let div = document.querySelector(ids[0]);
+    div.innerHTML = '';
     for (var i = 0; i<QtCase; i++){
         div.innerHTML += `
             <button onclick="tableOpen(${i}, ['#Table', '#Btns', '.Title'])" class="btn">Case ${(i+1)}</a>

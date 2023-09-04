@@ -11,7 +11,7 @@
     <title>Casos de Testes</title>
 </head>
 <body>
-    <h1 class="Title">Casos de Testes</h1>
+    <h1 class="Title" id="Title">Casos de Testes</h1>
     <div class="operetion" id="Btns">
     </div>
     <div class="tableMain" id="Table">
@@ -25,7 +25,7 @@
             '#Title' //titulo 3
         ];
         window.onload = ()=>{
-            tableClose(infos[0], infos[1]);
+            tableClose(infos[0], [infos[1], infos[2], infos[3]]);
         };
         
         document.querySelector('body').addEventListener('keydown', (event)=>{
