@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/39cab4bf95.js" crossorigin="anonymous"></script>
+    <script src="assets/vars.js"></script>
     <script src="assets/script.js"></script>
     <link rel="stylesheet" href="assets/style.css">
     <title>Casos de Testes</title>
@@ -15,11 +16,11 @@
     <div class="operetion" id="Btns">
     </div>
     <div class="tableMain" id="Table">
-
+        
     </div>
     <script>
         let infos = [
-            5, //numero de casos 0
+            CaseItem.length, //numero de casos 0
             '#Btns', //espaço para os btns 1
             '#Table', //tabela 2
             '#Title' //titulo 3
@@ -31,8 +32,8 @@
         document.querySelector('body').addEventListener('keydown', (event)=>{
             var KeyCode = event.keyCode || event.which;
             if(KeyCode==37){
-                tableClose(infos[0], infos[1]);
-            }else if (KeyCode >= 49 && KeyCode <= 53) {
+                tableClose(infos[0], [infos[1], infos[2], infos[3]]);
+            }else if (KeyCode >= 49 && KeyCode <= (49+(infos[0]-1))) {
                 var pageNumber = KeyCode - 49;
                 var Case = pageNumber;
                 tableOpen(Case, [infos[2], infos[1], infos[3]]);
