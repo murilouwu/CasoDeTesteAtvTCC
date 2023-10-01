@@ -1,10 +1,10 @@
 @import 'style2.css';
-:root{
-	--corA: #0C1726;
-	--corB: #3F6CA6;
-	--corC: #3C5973;
-	--corD: #8C8377;
-	--corE: #0D0D0D;
+:root{	
+	--corA: #21467b;
+	--corB: #4e9bff;
+	--corC: #669fd3;
+	--corD: #e5d4bd;
+	--corE: #292929;
 	--line-color: var(--corE);
 }
 *{
